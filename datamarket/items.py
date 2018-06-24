@@ -16,4 +16,4 @@ class DatamarketItem(scrapy.Item):
 	dim_8q8g = scrapy.Field()
 	dim_8q8f = scrapy.Field()	
 	Year	 = scrapy.Field()
-	People	 = scrapy.Field()s
+	People	 = scrapy.Field()
