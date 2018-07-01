@@ -11,7 +11,7 @@ from datamarket.items import DatamarketItem
 #import pandas as pd
 
 class MySpider(CSVFeedSpider):
-    name = 'csvexample'
+    name = 'DataMarket - World Population'
     start_urls = ['https://datamarket-api.qlik.com/api/v6/table.csv?ds=516m']
     delimiter = ','
     headers = ['dim_8q8e','dim_8q8g','dim_8q8f','Year','People']
@@ -19,9 +19,9 @@ class MySpider(CSVFeedSpider):
     def parse_row(self, response, row):
         log.msg('Hi, this is a row!: %r' % row)
         item = DatamarketItem()
-        item['dim_8q8e'] = row['Address']
-	item['dim_8q8g'] = row['Address']
-	item['dim_8q8f'] = row['Address']
+        item['dim_8q8e'] = row['dim_8q8e']
+	item['dim_8q8g'] = row['dim_8q8g']
+	item['dim_8q8f'] = row['dim_8q8f']
         item['Year']	 = row['Year']
 	item['People']	 = row['People']
         return item
