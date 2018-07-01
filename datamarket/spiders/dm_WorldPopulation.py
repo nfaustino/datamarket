@@ -20,9 +20,9 @@ class MySpider(CSVFeedSpider):
         log.msg('Hi, this is a row!: %r' % row)
         item = DatamarketItem()
         item['dim_8q8e'] = row['Address']
-	      item['dim_8q8g'] = row['Address']
-	      item['dim_8q8f'] = row['Address']
-        item['Year']	   = row['Year']
-	      item['People']	 = row['People']
+	item['dim_8q8g'] = row['Address']
+	item['dim_8q8f'] = row['Address']
+        item['Year']	 = row['Year']
+	item['People']	 = row['People']
         return item
 #df = pd.read_csv('https://datamarket-api.qlik.com/api/v6/table.csv?ds=516m')
